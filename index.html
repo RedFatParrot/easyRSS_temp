@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+   <style>
+   	.divEntry{
+   		border: 3px solid white;
+   		text-overflow: hidden;
+   	}
+   	body{
+   		background-color: black;
+   		color: white;
+   	}
+   	h1{
+   		text-align: center;
+   		overflow: hidden;
+   		text-decoration: none;
+   		color: white;
+   	}
+   	h1 a{
+   		text-align: center;
+   		overflow: hidden;
+   		text-decoration: none;
+   		color: white;
+   	}
+   </style>
+
+   <body>
+   	<div class="divEntry" name="divKrebs">
+   		<h1><a href="https://krebsonsecurity.com/">Krebs on Security</a></h1>
+   	   {%for i in krebs_entry%}
+      	<h2>{{i.title}}</h2>
+      	<h4>{{i.published[0:25]}}</h4>
+      	<p>{{i.summary}}</p>
+   	   {%endfor%}
+    </div>
+    <br/>
+    <div class="divEntry" name="divTHN">
+    	<h1><a href="https://thehackernews.com/">The Hacker News</a></h1>
+       {%for i in thn_entry%}
+        <h2>{{i.title}}</h2>
+        <h4>{{i.published[0:25]}}</h4>
+        <p>{{i.summary}}</p> 
+   	   {%endfor%}
+   	</div>
+   	<br/>
+   	<div class="divEntry" name="divDarkr">
+   		<h1><a href="https://www.darkreading.com/">Dark Reading</a></h1>
+       {%for i in darkr_entry%}
+        <h2>{{i.title}}</h2>
+        <h4>{{i.published[0:25]}}</h4>
+        <p>{{i.summary}}</p> 
+   	   {%endfor%}
+   	</div>
+   	<br/>
+   	<div class="divEntry" name="divSchneier">
+   		<h1><a href="https://www.schneier.com/">Schneier on Security</a></h1>
+       {%for i in schneier_entry%}
+        <h2>{{i.title}}</h2>
+        <h4>{{i.published[0:25]}}</h4>
+        <p>{{i.summary}}</p> 
+   	   {%endfor%}
+   	</div>
+   	<br/>
+   	<div class="divEntry" name="divNaked">
+   		<h1><a href="https://nakedsecurity.sophos.com/">Naked Security</a></h1>
+       {%for i in nakedsec_entry%}
+        <h2>{{i.title}}</h2>
+        <h4>{{i.published[0:25]}}</h4>
+        <p>{{i.summary}}</p> 
+   	   {%endfor%}
+   	</div>
+   	   	<div class="VGEntry" name="divVG">
+   		<h1><a href="https://VG.no/">VG Nyheter</a></h1>
+       {%for i in vg_nyheter_entry%}
+        <h2>{{i.title}}</h2>
+        <h4>{{i.published[0:25]}}</h4>
+        <p>{{i.summary}}</p> 
+   	   {%endfor%}
+   	</div>
+   </body>
+</html>
